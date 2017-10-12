@@ -12,8 +12,9 @@ def format_time(tic, toc):
         return "{:.0f}ms".format(t*1000)
 
 def main():
-
-    problems = [f for f in os.listdir() if 'pe' in f]
+    absolutePath = "{}/problems".format(os.path.dirname(os.path.realpath(__file__)))
+    sys.path.append(absolutePath)
+    problems = [f for f in os.listdir(absolutePath) if 'pe' in f]
     available = [int(re.findall('\d+', p)[0]) for p in problems]
     if len(sys.argv) > 1:
         s = [int(n) for n in sys.argv[1:]]

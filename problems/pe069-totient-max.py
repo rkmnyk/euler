@@ -1,9 +1,6 @@
 from math_tools import tools
 import numpy as np
 
-
-
-
 def compute(r = 1000000):
 
 
@@ -26,9 +23,6 @@ def compute(r = 1000000):
             maxx = update(maxx, xk)
             xk1 = xk
             xk *= p
-
-
-
 
     for m in range(2, r):
 
